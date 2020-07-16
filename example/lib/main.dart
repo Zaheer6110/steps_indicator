@@ -11,13 +11,13 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: MyHomePage(title: 'Steps Indicator Example'),
+      home: const MyHomePage(title: 'Steps Indicator Example'),
     );
   }
 }
 
 class MyHomePage extends StatefulWidget {
-  MyHomePage({Key key, this.title}) : super(key: key);
+  const MyHomePage({Key key, this.title}) : super(key: key);
 
   final String title;
 
@@ -48,6 +48,7 @@ class _MyHomePageState extends State<MyHomePage> {
               undoneLineColor: Colors.red,
               unselectedStepColor: Colors.red,
               lineLength: 20,
+              lineThickness: 2,
               lineLengthCustomStep: [
                 StepsIndicatorCustomLine(nbStep: 4, lenght: 105)
               ],
@@ -65,7 +66,7 @@ class _MyHomePageState extends State<MyHomePage> {
                       });
                     }
                   },
-                  child: Text('Prev'),
+                  child: const Text('Prev'),
                 ),
                 MaterialButton(
                   color: Colors.green,
@@ -76,7 +77,7 @@ class _MyHomePageState extends State<MyHomePage> {
                       });
                     }
                   },
-                  child: Text('Next'),
+                  child: const Text('Next'),
                 )
               ],
             )
