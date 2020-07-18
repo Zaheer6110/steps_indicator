@@ -6,7 +6,7 @@ A simple steps indicator widget
 
 ## Installation
 
-Add `steps_indicator: ^1.0.1` in your `pubspec.yaml` dependencies. And import it:
+Add `steps_indicator: ^1.1.0` in your `pubspec.yaml` dependencies. And import it:
 
 ```dart
 import 'package:steps_indicator/steps_indicator.dart';
@@ -26,6 +26,8 @@ StepsIndicator(
 Do not forget to check that the selectedStep is not lower than 0 and is not higher than the total number of steps (nbSteps).
 
 ## Params
+
+> Animations are disabled by default if you want to enable them remember to pass properties to true.
 
 ```dart
 StepsIndicator(
@@ -49,7 +51,9 @@ StepsIndicator(
   selectedStepWidget: Container(), // Custom Widget 
   lineLengthCustomStep: [
     StepsIndicatorCustomLine(nbStep: 3, lenght: 80)
-  ]
+  ],
+  enableLineAnimation: true,
+  enableStepAnimation: true,
 )
 ```
 
